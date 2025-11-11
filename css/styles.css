@@ -38,17 +38,37 @@
   src: url("../fonts/poppins-v24-latin-600.woff2") format("woff2");
 }
 
+/* ====== base theme (light by default) ====== */
 :root {
-  --font-family: "Inter", sans-serif;
-  --color-dark: #111111;
-  --color-light: #ffffff;
-  --color-accent: #0077ff;
-  --color-bg: #f5f7fa;
+  /* ------- fonts ------- */
+  --font-main: "Poppins", sans-serif;
+  --font-accent: "Impact", sans-serif;
+
+  /* ======= light theme colors ======= */
+  --color-bg: #f0f0f0;
+  --color-text: #292929;
+  --color-accent: #00b068;
+  --color-hover: #009156;
+  --color-light: #bcdfd1;
+  --color-dark: #e4e5e6;
+  --color-hover-alt: #bbbbbb;
+  --color-error: #e74a3b;
+}
+
+/* ======= dark theme override ======= */
+
+.dark-theme {
+  --color-bg: #292929;
+  --color-text: #f0f0f0;
+  --color-accent: #14c57c;
+  --color-light: #204136;
+  --color-dark: #2a2d32;
+  --color-hover-alt: #3b3f45;
 }
 
 body {
-  font-family: var(--font-family);
-  color: var(--color-dark);
+  font-family: var(--font-main);
+  color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.5;
   margin: 0;
@@ -79,21 +99,17 @@ button {
 }
 
 /* ----------------------------- */
-/* ------- global styles ------- */
+/* ------- common styles ------- */
 
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding: 0 16px;
+  max-width: 360px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
-.section {
-  padding: 60px 0;
-}
-
-.section-title {
-  font-size: 32px;
+/* .section-title {
+  font-size: 52px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
@@ -103,12 +119,26 @@ button {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
+} */
+
+@media screen and (min-width: 360px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
 }
 
 /* ---------------------- */
@@ -127,10 +157,13 @@ button {
   justify-content: center;
 }
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* --------------------------- */
@@ -139,90 +172,216 @@ button {
 /* ----------------------- */
 /* ------- section ------- */
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* ----------------------- */
 /* ------- section ------- */
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* ----------------------- */
 /* ------- section ------- */
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* ----------------------- */
 /* ------- section ------- */
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* ----------------------- */
 /* ------- section ------- */
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* ----------------------- */
 /* ------- section ------- */
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* ----------------------- */
 /* ------- section ------- */
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* ---------------------- */
 /* ------- footer ------- */
 
 .footer {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  border-top: 1px solid #e4e5e6;
+
+  background-color: var(--color-bg);
+  padding: 40px 16px;
+  font-family: var(--font-main);
+  min-width: 320px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.footer__logo {
+  font-family: "Impact", sans-serif;
+
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.footer_logo-bold {
+}
+
+.footer__logo-accent {
+  color: var(--color-accent);
+}
+
+.footer__socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer__socials a {
+  color: var(--color-text);
+  text-decoration: none;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+
+  transition: color 0.3s ease;
+}
+
+.footer__socials a:hover {
+  color: var(--color-accent);
+}
+
+.footer__copy {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
   text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 360px) {
+  .footer {
+    padding: 40px 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    min-width: 768px;
+  }
+
+  .footer__socials {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .footer__copy br {
+    display: none;
+  }
+
+  .footer__copy {
+    align-self: flex-end;
+    text-align: right;
+    margin: 0;
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
+  .footer {
+    min-width: 1280px;
+  }
+
+  .footer__top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /* ---------------------------- */
 /* ------- modal window ------- */
 
+@media screen and (min-width: 360px) {
+}
+
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 }
 
 /* ---------------------------- */
