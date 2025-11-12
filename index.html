@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
     <header class="header">
       <div class="container">
@@ -41,6 +42,7 @@
         </nav>
       </div>
     </header>
+
     <main>
       <section class="hero section">
         <div class="container">
@@ -50,13 +52,116 @@
           </p>
         </div>
       </section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
+
+      <section class="about">
+        <div class="about__container container">
+          <h2 class="about__title section__title">
+            About <span class="section__title-accent">me</span>
+          </h2>
+          <picture class="about__picture">
+            <source
+              srcset="
+                ./images/about/about-img.jpg,
+                ./images/about/about-img@2x.jpg 2x
+              "
+              media="(min-width: 1200px)" />
+            <source
+              srcset="
+                ./images/about/about-img-tab.jpg,
+                ./images/about/about-img-tab@2x.jpg 2x
+              "
+              media="(min-width: 768px)" />
+            <source
+              srcset="
+                ./images/about/about-img-mob.jpg,
+                ./images/about/about-img-mob@2x.jpg 2x
+              "
+              media="(max-width: 767px)" />
+            <img
+              src="./images/about/about-img.jpg"
+              alt="My portrait"
+              loading="lazy"
+          /></picture>
+
+          <div class="about__bio">
+            <h3 class="about__subtitle section__subtitle">BIO</h3>
+            <div class="about__bio-text">
+              <p class="about__text section__text">
+                I'm Sergii Taran, a talented programmer specializing in software
+                development. My expertise spans various programming languages
+                and technologies, and I am dedicated to continually enhancing my
+                skills. I thrive on seeking unconventional and creative
+                solutions to problems, leveraging a high level of analytical
+                skills to effectively tackle even the most challenging tasks.
+              </p>
+              <p class="about__text section__text">
+                Adaptable to both independent and team-oriented work, I
+                collaborate seamlessly with colleagues, exchanging ideas and
+                finding optimal solutions. My professional maturity enables me
+                to navigate challenges and stressful situations with a calm
+                demeanor, maintaining a consistently high quality of work.
+                Committed to self-improvement, I actively engage in studying new
+                technologies and practices to stay current with the latest
+                innovations in the field.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-expirience">
+            <div class="about__education about__expirience-item">
+              <h3 class="about__subtitle section__subtitle">EDUCATION</h3>
+              <ul class="about__education-list">
+                <li class="about__education-item">
+                  <p class="about__text section__text">
+                    2018 - 2019 / Frontend Development Diploma, GoIT IT School,
+                    New York
+                  </p>
+                </li>
+                <li class="about__education-item">
+                  <p class="about__text section__text">
+                    2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+                    School, New York
+                  </p>
+                </li>
+                <li class="about__education-item">
+                  <p class="about__text section__text">
+                    2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="about__role about__expirience-item">
+              <h3 class="about__subtitle section__subtitle">ROLE</h3>
+              <ul class="about__role-list">
+                <li class="about__role-item">
+                  <p class="about__text section__text">Frontend development</p>
+                </li>
+                <li class="about__role-item">
+                  <p class="about__text section__text">
+                    HeadlessCMS, Wordpress
+                  </p>
+                </li>
+                <li class="about__role-item">
+                  <p class="about__text section__text">Blender (enjoy)</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills"></section>
+
+      <section class="projects"></section>
+
+      <section class="benefits"></section>
+
+      <section class="questions"></section>
+
+      <section class="reviews"></section>
+
+      <section class="togetherwork"></section>
     </main>
 
     <footer class="footer">

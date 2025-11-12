@@ -104,27 +104,42 @@ button {
 .container {
   width: 100%;
   max-width: 1280px;
-  padding: 0 20px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
-/* .section-title {
-  font-size: 52px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 20px;
+.section__title {
+  font-family: "Impact", sans-serif;
+
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.section-text {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-} */
+.section__title-accent {
+  color: var(--color-accent);
+}
+
+.section__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
 
 @media screen and (min-width: 360px) {
   .container {
-    max-width: 100%;
     padding: 0 20px;
+  }
+
+  .section__title {
+    font-size: 52px;
+  }
+
+  .section__text {
+    font-size: 16px;
   }
 }
 
@@ -132,10 +147,19 @@ button {
   .container {
     padding: 0 32px;
   }
+
+  .section__title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
+  }
+
+  .section__title {
   }
 }
 
@@ -167,8 +191,8 @@ button {
 /* --------------------------- */
 /* ------- mobile menu ------- */
 
-/* ----------------------- */
-/* ------- section ------- */
+/* ---------------------------- */
+/* ------- hero section ------- */
 
 @media screen and (min-width: 360px) {
 }
@@ -179,8 +203,172 @@ button {
 @media screen and (min-width: 1280px) {
 }
 
-/* ----------------------- */
-/* ------- section ------- */
+/* ----------------------------- */
+/* ------- about section ------- */
+
+.about {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.about__container {
+  width: 100%;
+  max-width: 360px;
+}
+
+.about__title {
+  margin-bottom: 40px;
+}
+
+.about__picture {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.about__bio {
+  margin-bottom: 40px;
+}
+
+.about__subtitle {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  margin-bottom: 32px;
+}
+
+.about__bio-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-expirience {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__education-item,
+.about__role-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.about__education-item:last-child,
+.about__role-item:last-child {
+  margin-bottom: 0;
+}
+
+.about__education-item::before,
+.about__role-item::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: calc(0.5em + 2px);
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 1px;
+}
+
+@media screen and (min-width: 360px) {
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    padding-top: 124px;
+    padding-bottom: 124px;
+
+    position: relative;
+
+    background-image: image-set(
+      url("../images/hero-bg/decor-bg-6.png") 1x,
+      url("../images/hero-bg/decor-bg-6@2x.png") 2x
+    );
+    background-repeat: no-repeat;
+    background-position: right 78px bottom 296px;
+    background-size: 336px auto;
+  }
+
+  .about__container {
+    max-width: 768px;
+  }
+
+  .about__picture {
+    position: absolute;
+    top: 656px;
+    margin-bottom: 0;
+
+    max-width: 336px;
+  }
+
+  .about__bio {
+    margin-bottom: 140px;
+    width: 336px;
+    margin-left: auto;
+  }
+
+  .about-expirience {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .about__expirience-item {
+    width: calc((100% - 32px) / 2);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about {
+    padding-top: 164px;
+    padding-bottom: 164px;
+
+    background-image: image-set(
+      url("../images/hero-bg/decor-bg-2.png") 1x,
+      url("../images/hero-bg/decor-bg-2@2x.png") 2x
+    );
+    background-position: right 84px bottom 448px;
+    background-size: 384px auto;
+  }
+
+  .about__container {
+    max-width: 1280px;
+  }
+
+  .about__picture {
+    top: 600px;
+    left: 240px;
+
+    max-width: 384px;
+  }
+
+  .about__bio {
+    margin-bottom: 312px;
+    width: 488px;
+  }
+
+  .about-expirience {
+    gap: 136px;
+    max-width: 904px;
+    margin-left: 208px;
+  }
+
+  .about__expirience-item {
+    width: calc((100% - 136px) / 2);
+  }
+}
+
+/* ------------------------------ */
+/* ------- skills section ------- */
 
 @media screen and (min-width: 360px) {
 }
@@ -191,8 +379,8 @@ button {
 @media screen and (min-width: 1280px) {
 }
 
-/* ----------------------- */
-/* ------- section ------- */
+/* -------------------------------- */
+/* ------- projects section ------- */
 
 @media screen and (min-width: 360px) {
 }
@@ -203,8 +391,8 @@ button {
 @media screen and (min-width: 1280px) {
 }
 
-/* ----------------------- */
-/* ------- section ------- */
+/* -------------------------------- */
+/* ------- benefits section ------- */
 
 @media screen and (min-width: 360px) {
 }
@@ -215,8 +403,8 @@ button {
 @media screen and (min-width: 1280px) {
 }
 
-/* ----------------------- */
-/* ------- section ------- */
+/* --------------------------------- */
+/* ------- questions section ------- */
 
 @media screen and (min-width: 360px) {
 }
@@ -227,8 +415,8 @@ button {
 @media screen and (min-width: 1280px) {
 }
 
-/* ----------------------- */
-/* ------- section ------- */
+/* ------------------------------- */
+/* ------- reviews section ------- */
 
 @media screen and (min-width: 360px) {
 }
@@ -239,8 +427,8 @@ button {
 @media screen and (min-width: 1280px) {
 }
 
-/* ----------------------- */
-/* ------- section ------- */
+/* ------------------------------------ */
+/* ------- togetherwork section ------- */
 
 @media screen and (min-width: 360px) {
 }
@@ -257,8 +445,9 @@ button {
 .footer {
   border-top: 1px solid #e4e5e6;
 
-  background-color: var(--color-bg);
-  padding: 40px 16px;
+  background-color: inherit;
+  padding-top: 40px;
+  padding-bottom: 16px;
   font-family: var(--font-main);
   min-width: 320px;
 }
@@ -281,7 +470,7 @@ button {
   font-family: "Impact", sans-serif;
 
   font-weight: 400;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -309,7 +498,7 @@ button {
   text-decoration: none;
 
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
 
@@ -337,7 +526,7 @@ button {
 
 .footer__copy {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
@@ -346,7 +535,19 @@ button {
 
 @media screen and (min-width: 360px) {
   .footer {
-    padding: 40px 24px;
+    padding-bottom: 24px;
+  }
+
+  .footer__logo {
+    font-size: 32px;
+  }
+
+  .footer__socials a {
+    font-size: 16px;
+  }
+
+  .footer__copy {
+    font-size: 16px;
   }
 }
 
