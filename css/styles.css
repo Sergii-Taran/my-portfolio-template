@@ -174,7 +174,10 @@ button {
   text-transform: uppercase;
 }
 
-.header__theme-toggle {
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .header__burger {
@@ -196,6 +199,74 @@ button {
   display: none;
 }
 
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--color-dark);
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+  overflow: hidden;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.slider::before {
+  left: 2px;
+  background-color: var(--color-accent);
+}
+
+.slider::after {
+  left: 2px;
+  background-color: var(--color-dark);
+  transform: translate(-20px, -50%);
+}
+
+input:checked + .slider {
+  background-color: var(--color-dark);
+  border-color: var(--color-text);
+}
+
+input:checked + .slider::before {
+  transform: translate(24px, -50%);
+}
+
+input:checked + .slider::after {
+  transform: translate(16px, -50%);
+}
+
+body,
+.header,
+.header__logo,
+.header__burger-icon,
+.header__link {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 @media screen and (min-width: 768px) {
   .header {
     padding-top: 0px;
@@ -205,6 +276,10 @@ button {
   .header__logo {
     font-size: 32px;
     letter-spacing: 0.05em;
+  }
+
+  .header-wrapper {
+    gap: 40px;
   }
 
   .header__burger {
