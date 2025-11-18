@@ -103,9 +103,11 @@ button {
 
 .container {
   width: 100%;
-  max-width: 1280px;
-  padding: 0 16px;
-  margin: 0 auto;
+  max-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section__title {
@@ -129,23 +131,11 @@ button {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 360px) {
-  .container {
-    padding: 0 20px;
-  }
-
-  .section__title {
-    font-size: 52px;
-  }
-
-  .section__text {
-    font-size: 16px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
-    padding: 0 32px;
+    max-width: 704px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .section__title {
@@ -157,16 +147,14 @@ button {
 
 @media screen and (min-width: 1280px) {
   .container {
-  }
-
-  .section__title {
+    max-width: 1216px;
   }
 }
 
 /* ---------------------- */
 /* ------- header ------- */
 
-.header {
+/* .header {
   background-color: var(--color-light);
   padding: 20px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -177,7 +165,7 @@ button {
   gap: 24px;
   list-style: none;
   justify-content: center;
-}
+} */
 
 @media screen and (min-width: 360px) {
 }
@@ -206,7 +194,7 @@ button {
 /* ----------------------------- */
 /* ------- about section ------- */
 
-.about {
+/* .about {
   padding-top: 80px;
   padding-bottom: 40px;
 }
@@ -365,12 +353,12 @@ button {
   .about__experience-item {
     width: calc((100% - 136px) / 2);
   }
-}
+} */
 
 /* ------------------------------ */
 /* ------- skills section ------- */
 
-.skills {
+/* .skills {
   overflow: hidden;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -508,7 +496,7 @@ button {
     padding-top: 82px;
     padding-bottom: 82px;
   }
-}
+} */
 
 /* -------------------------------- */
 /* ------- projects section ------- */
@@ -525,7 +513,7 @@ button {
 /* -------------------------------- */
 /* ------- benefits section ------- */
 
-.benefits {
+/* .benefits {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -534,16 +522,15 @@ button {
 }
 
 .benefits__title {
-  max-width: 320px;
+  max-width: 300px;
   margin-bottom: 40px;
 }
 
 .benefits__list {
-  /* max-width: 320px; */
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 100%;
 }
 
 .benefits__list-item {
@@ -582,9 +569,6 @@ button {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 360px) {
-}
-
 @media screen and (min-width: 768px) {
   .benefits {
     padding-top: 62px;
@@ -604,7 +588,7 @@ button {
   }
 
   .benefits__list-item:nth-child(1) {
-    grid-column: 2 / 3;
+    grid-column: 2;
     grid-row: 1;
   }
 
@@ -659,7 +643,7 @@ button {
     grid-column: 3;
     grid-row: 2;
   }
-}
+} */
 
 /* --------------------------------- */
 /* ------- questions section ------- */
@@ -700,7 +684,7 @@ button {
 /* ---------------------- */
 /* ------- footer ------- */
 
-.footer {
+/* .footer {
   border-top: 1px solid #e4e5e6;
 
   background-color: inherit;
@@ -832,7 +816,7 @@ button {
     justify-content: space-between;
     align-items: center;
   }
-}
+} */
 
 /* ---------------------------- */
 /* ------- modal window ------- */
