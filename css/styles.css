@@ -167,9 +167,6 @@ button {
   justify-content: center;
 } */
 
-@media screen and (min-width: 360px) {
-}
-
 @media screen and (min-width: 768px) {
 }
 
@@ -181,9 +178,6 @@ button {
 
 /* ---------------------------- */
 /* ------- hero section ------- */
-
-@media screen and (min-width: 360px) {
-}
 
 @media screen and (min-width: 768px) {
 }
@@ -501,9 +495,6 @@ button {
 /* -------------------------------- */
 /* ------- projects section ------- */
 
-@media screen and (min-width: 360px) {
-}
-
 @media screen and (min-width: 768px) {
 }
 
@@ -648,9 +639,6 @@ button {
 /* --------------------------------- */
 /* ------- questions section ------- */
 
-@media screen and (min-width: 360px) {
-}
-
 @media screen and (min-width: 768px) {
 }
 
@@ -660,9 +648,6 @@ button {
 /* ------------------------------- */
 /* ------- reviews section ------- */
 
-@media screen and (min-width: 360px) {
-}
-
 @media screen and (min-width: 768px) {
 }
 
@@ -671,9 +656,6 @@ button {
 
 /* ------------------------------------ */
 /* ------- togetherwork section ------- */
-
-@media screen and (min-width: 360px) {
-}
 
 @media screen and (min-width: 768px) {
 }
@@ -820,9 +802,6 @@ button {
 
 /* ---------------------------- */
 /* ------- modal window ------- */
-
-@media screen and (min-width: 360px) {
-}
 
 @media screen and (min-width: 768px) {
 }

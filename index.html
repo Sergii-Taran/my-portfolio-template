@@ -31,29 +31,43 @@
 
   <body>
     <header class="header">
-      <div class="container">
-        <a href="#" class="logo">Logo</a>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+      <div class="header__container container">
+        <a href="/" class="header__logo">
+          Sergii<span class="section__title-accent">Taran.</span>
+        </a>
+
+        <button
+          type="button"
+          class="header__theme-toggle"
+          aria-label="Toggle theme"
+        ></button>
+
+        <button class="header__burger" aria-label="Open menu">
+          <svg class="header__burger-icon" width="32" height="32">
+            <use href="./images/icons.svg#icon-burger-btn"></use>
+          </svg>
+        </button>
+
+        <nav class="header__nav" aria-label="Primary menu">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#about">About me</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#projects">Projects</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#contacts">Contacts</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      
-        <div class="container">
-          <h1 class="section-title">Your Project Starts Here</h1>
-          <p class="section-text">
-            Use this template to kickstart your HTML/CSS projects quickly.
-          </p>
-        </div>
-      </section> -->
+      <section class="hero"></section>
 
-      <!-- <section class="about">
+      <!-- <section id="about" class="about">
         <div class="about__container container">
           <h2 class="about__title section__title">
             About <span class="section__title-accent">me</span>
@@ -221,7 +235,7 @@
         </div>
       </section> -->
 
-      <section class="projects"></section>
+      <section id="projects" class="projects"></section>
 
       <!-- <section class="benefits section">
         <div class="benefits__container container">
@@ -287,7 +301,7 @@
 
       <section class="reviews"></section>
 
-      <section class="togetherwork"></section>
+      <section id="contacts" class="togetherwork"></section>
     </main>
 
     <!-- <footer class="footer">
