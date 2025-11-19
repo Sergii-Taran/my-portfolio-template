@@ -328,6 +328,139 @@ body,
 /* --------------------------- */
 /* ------- mobile menu ------- */
 
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-bg);
+  padding: 20px 20px 16px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10%);
+
+  transition: all 0.35s ease;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+
+  overflow: hidden;
+}
+
+.mobile-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 91px;
+  height: 264px;
+  z-index: -1;
+
+  background-image: image-set(
+    url("../images/hero-bg/decor-menu-top.png") 1x,
+    url("../images/hero-bg/decor-menu-top@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+
+  filter: blur(3px);
+}
+
+.mobile-menu::after {
+  content: "";
+  position: absolute;
+  left: 162px;
+  right: 0;
+  bottom: 106px;
+  height: 131px;
+  z-index: -1;
+
+  background-image: image-set(
+    url("../images/hero-bg/decor-menu-btm.png") 1x,
+    url("../images/hero-bg/decor-menu-btm@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
+  filter: blur(3px);
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-menu__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu__logo {
+  font-family: "Impact", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mobile-menu__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.mobile-menu__close-icon {
+  stroke-width: 2px;
+  stroke: var(--color-text);
+
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.mobile-menu__list {
+  margin-top: auto;
+  margin-bottom: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu__link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu__link:hover {
+  color: var(--color-accent);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 /* ---------------------------- */
 /* ------- hero section ------- */
 
