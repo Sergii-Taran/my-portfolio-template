@@ -20,4 +20,11 @@ export function initMenu() {
       document.body.classList.remove("no-scroll");
     })
   );
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileMenu?.classList.contains("active")) {
+      mobileMenu.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
+  });
 }
