@@ -470,7 +470,150 @@ body,
 /* ---------------------------- */
 /* ------- hero section ------- */
 
+.hero {
+  padding-top: 16px;
+  padding-bottom: 0;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__top-wrapper {
+  margin-top: 96px;
+  margin-bottom: 40px;
+}
+
+.hero__title {
+  font-family: "Impact", sans-serif;
+
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.hero__title-accent {
+  color: var(--color-accent);
+}
+
+.hero__img {
+  display: none;
+}
+
+.hero__bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-bottom: 72px;
+}
+
+.hero__link {
+  position: relative;
+  display: inline-block;
+
+  padding: 32px 0;
+
+  font-size: 16px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  overflow: hidden;
+}
+
+.hero__link-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  transition: transform 250ms ease;
+}
+
+.hero__link:hover .hero__link-content {
+  transform: translateX(50px);
+}
+
+.hero__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 55%;
+  height: 100%;
+  background-color: var(--color-light);
+  border-radius: 16px;
+
+  z-index: -1;
+  transition: background-color 250ms ease;
+}
+
+.hero__link:hover::after {
+  background-color: var(--color-accent);
+}
+
+.hero__arrow {
+  stroke-width: 2px;
+  stroke: var(--color-accent);
+}
+
+.hero__text {
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.hero__text-accent {
+  color: var(--color-accent);
+}
+
+.hero__socials {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  background-color: var(--color-dark);
+  margin-left: calc((100vw - 100%) / -2);
+  margin-right: calc((100vw - 100%) / -2);
+}
+
+.hero__socials-item {
+}
+
+.hero__socials-link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
 @media screen and (min-width: 768px) {
+  .hero__top-wrapper {
+    margin-top: 72px;
+    margin-bottom: 60px;
+  }
+
+  .hero__title {
+    font-size: 124px;
+    line-height: 1.19;
+    letter-spacing: 0.01em;
+  }
+
+  .hero__bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    margin-bottom: 104px;
+  }
 }
 
 @media screen and (min-width: 1280px) {

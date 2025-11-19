@@ -105,27 +105,41 @@
     <main>
       <section class="hero section">
         <div class="hero__container container">
-          <h1 class="hero__title">Hello, I am Fullstack developer</h1>
+          <div class="hero__top-wrapper">
+            <h1 class="hero__title">
+              Hello, I am
+              <span class="hero__title-accent">Fullstack developer</span>
+            </h1>
 
-          <img
-            class="hero__img"
-            src="/images/hero/hero-img.jpg"
-            srcset="
-              /images/hero/hero-img.jpg    1x,
-              /images/hero/hero-img@2x.jpg 2x
-            "
-            alt="Portrait of Fullstack developer"
-            width="592"
-          />
+            <img
+              class="hero__img"
+              src="/images/hero/hero-img.jpg"
+              srcset="
+                /images/hero/hero-img.jpg    1x,
+                /images/hero/hero-img@2x.jpg 2x
+              "
+              alt="Portrait of Fullstack developer"
+              width="592"
+            />
+          </div>
 
-          <a class="hero__link" href="#contacts">Order the project</a>
+          <div class="hero__bottom-wrapper">
+            <a class="hero__link" href="#contacts"
+              ><span class="hero__link-content">
+                <svg class="hero__arrow" width="28" height="15">
+                  <use href="/images/icons.svg#icon-arrow-hero"></use>
+                </svg>
+                Order the project</span
+              ></a
+            >
 
-          <p class="hero__text">
-            I work with people all over the world to create
-            <span class="hero__text-accent">impressive</span> and
-            <span class="hero__text-accent">functional websites</span> that
-            reflect each client’s unique personality.
-          </p>
+            <p class="hero__text">
+              I work with people all over the world to create
+              <span class="hero__text-accent">impressive</span> and
+              <span class="hero__text-accent">functional websites</span> that
+              reflect each client’s unique personality.
+            </p>
+          </div>
 
           <ul class="hero__socials" aria-label="Social networks">
             <li class="hero__socials-item">
