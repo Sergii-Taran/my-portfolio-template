@@ -336,9 +336,9 @@ body,
 
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-10%);
+  transform: translateY(-20px);
 
-  transition: all 0.35s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 
   display: flex;
   flex-direction: column;
@@ -364,13 +364,13 @@ body,
   background-position: center top;
   background-size: contain;
 
-  filter: blur(3px);
+  filter: blur(2px);
 }
 
 .mobile-menu::after {
   content: "";
   position: absolute;
-  left: 162px;
+  left: 0;
   right: 0;
   bottom: 106px;
   height: 131px;
@@ -381,10 +381,10 @@ body,
     url("../images/hero-bg/decor-menu-btm@2x.png") 2x
   );
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: right 40px bottom 0;
   background-size: contain;
 
-  filter: blur(3px);
+  filter: blur(2px);
 }
 
 .mobile-menu.active {
@@ -400,6 +400,7 @@ body,
 }
 
 .mobile-menu__logo {
+  display: inline-block;
   font-family: "Impact", sans-serif;
   font-size: 24px;
   line-height: 1;
@@ -428,6 +429,11 @@ body,
   width: 32px;
   height: 32px;
   display: block;
+  transition: stroke 0.3s ease;
+}
+
+.mobile-menu__close:hover .mobile-menu__close-icon {
+  stroke: var(--color-accent);
 }
 
 .mobile-menu__list {
