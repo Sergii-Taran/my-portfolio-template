@@ -473,6 +473,48 @@ body,
 .hero {
   padding-top: 0px;
   padding-bottom: 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  z-index: -3;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  filter: blur(2px);
+}
+
+.hero::before {
+  top: 20px;
+  height: 264px;
+
+  background-image: image-set(
+    url("../images/hero-bg/decor-menu-top.png") 1x,
+    url("../images/hero-bg/decor-menu-top@2x.png") 2x
+  );
+
+  background-position: center top;
+}
+
+.hero::after {
+  top: 365px;
+  height: 131px;
+
+  background-image: image-set(
+    url("../images/hero-bg/decor-menu-btm.png") 1x,
+    url("../images/hero-bg/decor-menu-btm@2x.png") 2x
+  );
+
+  background-position: right 40px bottom 0;
 }
 
 .hero__container {
@@ -593,9 +635,40 @@ body,
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
+
+  transition: color 0.3s ease;
+}
+
+.hero__socials-link:hover,
+.hero__socials-link:focus {
+  color: var(--color-accent);
 }
 
 @media screen and (min-width: 768px) {
+  .hero::before {
+    top: 20px;
+    height: 276px;
+
+    background-image: image-set(
+      url("../images/hero-bg/decor-hero-top.png") 1x,
+      url("../images/hero-bg/decor-hero-top@2x.png") 2x
+    );
+
+    background-position: right 40px bottom 0;
+  }
+
+  .hero::after {
+    top: 458px;
+    height: 276px;
+
+    background-image: image-set(
+      url("../images/hero-bg/decor-hero-btm.png") 1x,
+      url("../images/hero-bg/decor-hero-btm@2x.png") 2x
+    );
+
+    background-position: right 254px bottom 0;
+  }
+
   .hero__top-wrapper {
     margin-top: 88px;
     margin-bottom: 60px;
@@ -635,6 +708,19 @@ body,
 }
 
 @media screen and (min-width: 1280px) {
+  .hero::before {
+    transform: rotateX(180deg);
+    top: 20px;
+
+    background-position: right 40px bottom 0;
+  }
+
+  .hero::after {
+    top: 480px;
+
+    background-position: left 224px bottom 0;
+  }
+
   .hero__top-wrapper {
     margin-bottom: 80px;
     display: flex;
@@ -651,6 +737,7 @@ body,
     width: 592px;
     height: auto;
     border-radius: 32px;
+    overflow: hidden;
   }
 
   .hero__bottom-wrapper {
