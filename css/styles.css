@@ -61,7 +61,7 @@
   --color-bg: #292929;
   --color-text: #f0f0f0;
   --color-accent: #14c57c;
-  --color-light: #204136;
+  --color-light: #009156;
   --color-dark: #2a2d32;
   --color-hover-alt: #3b3f45;
 }
@@ -475,7 +475,7 @@ body,
   padding-bottom: 0;
 
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero::before,
@@ -485,7 +485,7 @@ body,
   left: 0;
   right: 0;
 
-  z-index: -3;
+  z-index: -2;
 
   background-repeat: no-repeat;
   background-size: contain;
@@ -541,7 +541,7 @@ body,
   color: var(--color-accent);
 }
 
-.hero__img {
+.hero__img-wrapper {
   display: none;
 }
 
@@ -709,7 +709,7 @@ body,
 
 @media screen and (min-width: 1280px) {
   .hero::before {
-    transform: rotateX(180deg);
+    transform: scaleY(-1);
     top: 20px;
 
     background-position: right 40px bottom 0;
@@ -732,12 +732,20 @@ body,
     max-width: 552px;
   }
 
-  .hero__img {
+  .hero__img-wrapper {
     display: block;
+
     width: 592px;
-    height: auto;
     border-radius: 32px;
     overflow: hidden;
+  }
+
+  .hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1.01);
+    object-fit: cover;
   }
 
   .hero__bottom-wrapper {
@@ -755,7 +763,7 @@ body,
 
   .hero__link::after {
     right: auto;
-    left: 150px;
+    left: 152px;
   }
 
   .hero__text {
