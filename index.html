@@ -194,47 +194,53 @@
             About <span class="section__title-accent">me</span>
           </h2>
 
-          <picture class="about__picture">
-            <source
-              srcset="
-                ./images/about/about-img.jpg,
-                ./images/about/about-img@2x.jpg 2x
-              "
-              media="(min-width: 768px)" />
+          <div class="about__grid">
+            <picture class="about__picture">
+              <source
+                srcset="
+                  ./images/about/about-img.jpg,
+                  ./images/about/about-img@2x.jpg 2x
+                "
+                media="(min-width: 1280px)" />
+              <source
+                srcset="
+                  ./images/about/about-img-tab.jpg,
+                  ./images/about/about-img-tab@2x.jpg 2x
+                "
+                media="(min-width: 768px)" />
 
-            <img
-              src="./images/about/about-img-mob.jpg"
-              srcset="./images/about/about-img-mob@2x.jpg 2x"
-              alt="My portrait"
-              loading="lazy"
-          /></picture>
+              <img
+                src="./images/about/about-img-mob.jpg"
+                srcset="./images/about/about-img-mob@2x.jpg 2x"
+                alt="My portrait"
+                loading="lazy"
+            /></picture>
 
-          <div class="about__bio">
-            <h3 class="about__subtitle section__subtitle">BIO</h3>
+            <div class="about__bio">
+              <h3 class="about__subtitle">BIO</h3>
 
-            <p class="about__text section__text">
-              I'm Sergii Taran, a talented programmer specializing in software
-              development. My expertise spans various programming languages and
-              technologies, and I am dedicated to continually enhancing my
-              skills. I thrive on seeking unconventional and creative solutions
-              to problems, leveraging a high level of analytical skills to
-              effectively tackle even the most challenging tasks.
-            </p>
-            <p class="about__text section__text">
-              Adaptable to both independent and team-oriented work, I
-              collaborate seamlessly with colleagues, exchanging ideas and
-              finding optimal solutions. My professional maturity enables me to
-              navigate challenges and stressful situations with a calm demeanor,
-              maintaining a consistently high quality of work. Committed to
-              self-improvement, I actively engage in studying new technologies
-              and practices to stay current with the latest innovations in the
-              field.
-            </p>
-          </div>
+              <p class="about__text section__text">
+                I'm Sergii Taran, a talented programmer specializing in software
+                development. My expertise spans various programming languages
+                and technologies, and I am dedicated to continually enhancing my
+                skills. I thrive on seeking unconventional and creative
+                solutions to problems, leveraging a high level of analytical
+                skills to effectively tackle even the most challenging tasks.
+              </p>
+              <p class="about__text section__text">
+                Adaptable to both independent and team-oriented work, I
+                collaborate seamlessly with colleagues, exchanging ideas and
+                finding optimal solutions. My professional maturity enables me
+                to navigate challenges and stressful situations with a calm
+                demeanor, maintaining a consistently high quality of work.
+                Committed to self-improvement, I actively engage in studying new
+                technologies and practices to stay current with the latest
+                innovations in the field.
+              </p>
+            </div>
 
-          <div class="about__experience">
-            <div class="about__education about__experience-item">
-              <h3 class="about__subtitle section__subtitle">EDUCATION</h3>
+            <div class="about__education">
+              <h3 class="about__subtitle">EDUCATION</h3>
               <ul class="about__education-list">
                 <li class="about__education-item">
                   <p class="about__text section__text">
@@ -256,8 +262,8 @@
               </ul>
             </div>
 
-            <div class="about__role about__experience-item">
-              <h3 class="about__subtitle section__subtitle">ROLE</h3>
+            <div class="about__role">
+              <h3 class="about__subtitle">ROLE</h3>
               <ul class="about__role-list">
                 <li class="about__role-item">
                   <p class="about__text section__text">Frontend development</p>
@@ -276,7 +282,7 @@
         </div>
       </section>
 
-      <!-- <section class="skills section">
+      <section class="skills section">
         <div class="skills__container container">
           <h2 class="skills__title visually-hidden">Tech Skills</h2>
 
@@ -344,7 +350,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <section id="projects" class="projects"></section>
 
