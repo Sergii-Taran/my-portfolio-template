@@ -770,6 +770,65 @@ body,
 /* ----------------------------- */
 /* ------- about section ------- */
 
+.about {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__title {
+  text-align: left;
+}
+
+.about__picture {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.about__bio {
+}
+
+.about__subtitle {
+}
+
+.section__subtitle {
+}
+
+.about__text {
+}
+
+.about__experience {
+}
+
+.about__education {
+}
+
+.about__experience-item {
+}
+
+.about__education-list {
+}
+
+.about__education-item {
+}
+
+.about__role {
+}
+
+.about__role-list {
+}
+
+.about__role-item {
+}
+
 /* .about {
   padding-top: 80px;
   padding-bottom: 40px;
