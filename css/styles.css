@@ -349,44 +349,42 @@ body,
   overflow: hidden;
 }
 
-.mobile-menu::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 91px;
-  height: 264px;
-  z-index: -1;
-
-  background-image: image-set(
-    url("../images/hero-bg/decor-menu-top.png") 1x,
-    url("../images/hero-bg/decor-menu-top@2x.png") 2x
-  );
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;
-
-  filter: blur(2px);
-}
-
+.mobile-menu::before,
 .mobile-menu::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 106px;
-  height: 131px;
-  z-index: -1;
 
-  background-image: image-set(
-    url("../images/hero-bg/decor-menu-btm.png") 1x,
-    url("../images/hero-bg/decor-menu-btm@2x.png") 2x
-  );
+  left: 50%;
+
   background-repeat: no-repeat;
-  background-position: right 40px bottom 0;
   background-size: contain;
 
+  z-index: -2;
   filter: blur(2px);
+}
+
+.mobile-menu::before {
+  top: 80px;
+  transform: translateX(-45%);
+  width: 352px;
+  height: 264px;
+
+  background-image: image-set(
+    url("../images/bg/decor-bg1.png") 1x,
+    url("../images/bg/decor-bg1@2x.png") 2x
+  );
+}
+
+.mobile-menu::after {
+  bottom: 56px;
+  transform: translateX(-10%);
+  width: 170px;
+  height: 132px;
+
+  background-image: image-set(
+    url("../images/bg/decor-bg2.png") 1x,
+    url("../images/bg/decor-bg2@2x.png") 2x
+  );
 }
 
 .mobile-menu.active {
@@ -477,46 +475,45 @@ body,
   padding-bottom: 0;
 
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .hero::before,
 .hero::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
 
-  z-index: -2;
+  left: 50%;
 
   background-repeat: no-repeat;
   background-size: contain;
 
+  z-index: -2;
   filter: blur(2px);
 }
 
 .hero::before {
-  top: 20px;
+  top: 27px;
+  transform: translateX(-45%);
+  width: 352px;
   height: 264px;
 
   background-image: image-set(
-    url("../images/hero-bg/decor-menu-top.png") 1x,
-    url("../images/hero-bg/decor-menu-top@2x.png") 2x
+    url("../images/bg/decor-bg1.png") 1x,
+    url("../images/bg/decor-bg1@2x.png") 2x
   );
-
-  background-position: center top;
 }
 
 .hero::after {
   top: 365px;
-  height: 131px;
+  transform: translateX(-10%);
+  width: 170px;
+  height: 132px;
 
   background-image: image-set(
-    url("../images/hero-bg/decor-menu-btm.png") 1x,
-    url("../images/hero-bg/decor-menu-btm@2x.png") 2x
+    url("../images/bg/decor-bg2.png") 1x,
+    url("../images/bg/decor-bg2@2x.png") 2x
   );
-
-  background-position: right 40px bottom 0;
 }
 
 .hero__container {
@@ -629,9 +626,6 @@ body,
   margin-right: calc((100vw - 100%) / -2);
 }
 
-.hero__socials-item {
-}
-
 .hero__socials-link {
   font-weight: 300;
   font-size: 16px;
@@ -648,27 +642,27 @@ body,
 
 @media screen and (min-width: 768px) {
   .hero::before {
-    top: 20px;
+    top: 16px;
+    transform: translateX(0%);
+    width: 356px;
     height: 276px;
 
     background-image: image-set(
-      url("../images/hero-bg/decor-hero-top.png") 1x,
-      url("../images/hero-bg/decor-hero-top@2x.png") 2x
+      url("../images/bg/decor-bg3.png") 1x,
+      url("../images/bg/decor-bg3@2x.png") 2x
     );
-
-    background-position: right 40px bottom 0;
   }
 
   .hero::after {
     top: 458px;
+    transform: translateX(-62%);
+    width: 356px;
     height: 276px;
 
     background-image: image-set(
-      url("../images/hero-bg/decor-hero-btm.png") 1x,
-      url("../images/hero-bg/decor-hero-btm@2x.png") 2x
+      url("../images/bg/decor-bg3.png") 1x,
+      url("../images/bg/decor-bg3@2x.png") 2x
     );
-
-    background-position: right 254px bottom 0;
   }
 
   .hero__top-wrapper {
@@ -711,16 +705,16 @@ body,
 
 @media screen and (min-width: 1280px) {
   .hero::before {
-    transform: scaleY(-1);
-    top: 20px;
+    top: 18px;
 
-    background-position: right 40px bottom 0;
+    transform: translateX(72%) scaleY(-1);
   }
 
   .hero::after {
-    top: 480px;
-
-    background-position: left 224px bottom 0;
+    top: 484px;
+    transform: translateX(-112%);
+    width: 356px;
+    height: 276px;
   }
 
   .hero__top-wrapper {
