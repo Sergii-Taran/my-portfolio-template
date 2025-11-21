@@ -45,25 +45,28 @@
   --font-accent: "Impact", sans-serif;
 
   /* ======= light theme colors ======= */
-  --color-bg: #f0f0f0;
   --color-text: #292929;
   --color-accent: #00b068;
-  --color-hover: #009156;
-  --color-light: #bcdfd1;
-  --color-dark: #e4e5e6;
-  --color-hover-alt: #bbbbbb;
+  --color-bg: #f0f0f0;
+  --color-send-text: #f0f0f0;
+  --color-elements-bg: #e4e5e6;
+  --color-footer-border: #e4e5e6;
+  --color-bg-accent: #bcdfd1;
+  --color-send-hover: #009156;
+  --color-hover-gray: #bbbbbb;
   --color-error: #e74a3b;
 }
 
 /* ======= dark theme override ======= */
 
 .dark-theme {
-  --color-bg: #292929;
   --color-text: #f0f0f0;
   --color-accent: #14c57c;
-  --color-light: #009156;
-  --color-dark: #2a2d32;
-  --color-hover-alt: #3b3f45;
+  --color-bg: #1e2023;
+  --color-elements-bg: #2a2d32;
+  --color-footer-border: #f0f0f0;
+  --color-bg-accent: #204136;
+  --color-hover-gray: #3b3f45;
 }
 
 body {
@@ -216,7 +219,7 @@ button {
   position: absolute;
   cursor: pointer;
   inset: 0;
-  background-color: var(--color-dark);
+  background-color: var(--color-elements-bg);
   border-radius: 16px;
   border: 1px solid transparent;
   transition: background-color 0.4s ease, border-color 0.4s ease;
@@ -242,13 +245,12 @@ button {
 
 .slider::after {
   left: 2px;
-  background-color: var(--color-dark);
+  background-color: var(--color-elements-bg);
   transform: translate(-20px, -50%);
 }
 
 input:checked + .slider {
-  background-color: var(--color-dark);
-  border-color: var(--color-text);
+  background-color: var(--color-elements-bg);
 }
 
 input:checked + .slider::before {
@@ -588,7 +590,7 @@ body,
 
   width: 165px;
   height: 100%;
-  background-color: var(--color-light);
+  background-color: var(--color-bg-accent);
   border-radius: 16px;
 
   z-index: -1;
@@ -622,7 +624,7 @@ body,
   flex-direction: column;
   gap: 24px;
   align-items: center;
-  background-color: var(--color-dark);
+  background-color: var(--color-elements-bg);
   margin-left: calc((100vw - 100%) / -2);
   margin-right: calc((100vw - 100%) / -2);
 }
