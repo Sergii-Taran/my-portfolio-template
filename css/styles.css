@@ -1051,8 +1051,9 @@ body,
 .skills__marquee-bottom {
   position: relative;
   overflow: hidden;
-  width: 120vw;
-  margin-left: -10vw;
+  /* width: 120vw; */
+  width: 100%;
+  /* margin-left: -10vw; */
   display: flex;
   white-space: nowrap;
 
@@ -1067,18 +1068,23 @@ body,
 .skills__marquee-bottom {
   -webkit-mask-image: linear-gradient(
     to right,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
   );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+
   mask-image: linear-gradient(
     to right,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
   );
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
 }
 
 .skills__marquee-top {
