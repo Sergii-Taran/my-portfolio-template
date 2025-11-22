@@ -194,27 +194,29 @@
             About <span class="section__title-accent">me</span>
           </h2>
 
-          <div class="about__grid">
-            <picture class="about__picture">
-              <source
-                srcset="
-                  ./images/about/about-img.jpg,
-                  ./images/about/about-img@2x.jpg 2x
-                "
-                media="(min-width: 1280px)" />
-              <source
-                srcset="
-                  ./images/about/about-img-tab.jpg,
-                  ./images/about/about-img-tab@2x.jpg 2x
-                "
-                media="(min-width: 768px)" />
+          <div class="about__subcontainer">
+            <div class="about__img-container">
+              <picture class="about__picture">
+                <source
+                  srcset="
+                    ./images/about/about-img.jpg,
+                    ./images/about/about-img@2x.jpg 2x
+                  "
+                  media="(min-width: 1280px)" />
+                <source
+                  srcset="
+                    ./images/about/about-img-tab.jpg,
+                    ./images/about/about-img-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
 
-              <img
-                src="./images/about/about-img-mob.jpg"
-                srcset="./images/about/about-img-mob@2x.jpg 2x"
-                alt="My portrait"
-                loading="lazy"
-            /></picture>
+                <img
+                  src="./images/about/about-img-mob.jpg"
+                  srcset="./images/about/about-img-mob@2x.jpg 2x"
+                  alt="My portrait"
+                  loading="lazy"
+              /></picture>
+            </div>
 
             <div class="about__bio">
               <h3 class="about__subtitle">BIO</h3>
