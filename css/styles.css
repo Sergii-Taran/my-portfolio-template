@@ -861,6 +861,7 @@ body,
   height: 4px;
   background-color: var(--color-accent);
   border-radius: 1px;
+  flex-shrink: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -945,172 +946,15 @@ body,
     margin-left: 208px;
   }
 
+  .about__img-container {
+    position: relative;
+  }
+
   .about__picture {
     width: 384px;
     top: 272px;
   }
 }
-
-/* .about {
-  padding-top: 80px;
-  padding-bottom: 40px;
-}
-
-.about__container {
-  width: 100%;
-  max-width: 360px;
-}
-
-.about__title {
-  margin-bottom: 40px;
-}
-
-.about__picture {
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-
-.about__bio {
-  margin-bottom: 40px;
-}
-
-.about__subtitle {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-
-  margin-bottom: 32px;
-}
-
-.about__bio-text {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.about__experience {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.about__education-item,
-.about__role-item {
-  position: relative;
-  padding-left: 32px;
-  margin-bottom: 12px;
-  width: 100%;
-}
-
-.about__education-item:last-child,
-.about__role-item:last-child {
-  margin-bottom: 0;
-}
-
-.about__education-item::before,
-.about__role-item::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: calc(0.5em + 2px);
-  width: 4px;
-  height: 4px;
-  background-color: var(--color-accent);
-  border-radius: 1px;
-}
-
-@media screen and (min-width: 360px) {
-}
-
-@media screen and (min-width: 768px) {
-  .about {
-    padding-top: 124px;
-    padding-bottom: 62px;
-
-    position: relative;
-
-    background-image: image-set(
-      url("../images/hero-bg/decor-bg-6.png") 1x,
-      url("../images/hero-bg/decor-bg-6@2x.png") 2x
-    );
-    background-repeat: no-repeat;
-    background-position: right 78px bottom 296px;
-    background-size: 336px auto;
-  }
-
-  .about__container {
-    max-width: 768px;
-  }
-
-  .about__picture {
-    position: absolute;
-    top: 656px;
-    margin-bottom: 0;
-
-    max-width: 336px;
-  }
-
-  .about__bio {
-    margin-bottom: 140px;
-    width: 336px;
-    margin-left: auto;
-  }
-
-  .about__experience {
-    flex-direction: row;
-    gap: 32px;
-  }
-
-  .about__experience-item {
-    width: calc((100% - 32px) / 2);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .about {
-    padding-top: 164px;
-    padding-bottom: 82px;
-
-    background-image: image-set(
-      url("../images/hero-bg/decor-bg-2.png") 1x,
-      url("../images/hero-bg/decor-bg-2@2x.png") 2x
-    );
-    background-position: right 84px bottom 448px;
-    background-size: 384px auto;
-  }
-
-  .about__container {
-    max-width: 1280px;
-  }
-
-  .about__picture {
-    top: 600px;
-    left: 240px;
-
-    max-width: 384px;
-  }
-
-  .about__bio {
-    margin-bottom: 312px;
-    width: 488px;
-  }
-
-  .about__experience {
-    gap: 136px;
-    max-width: 904px;
-    margin-left: 208px;
-  }
-
-  .about__experience-item {
-    width: calc((100% - 136px) / 2);
-  }
-} */
 
 /* ------------------------------ */
 /* ------- skills section ------- */
