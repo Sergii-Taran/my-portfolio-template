@@ -1205,6 +1205,32 @@ body,
   .benefits {
     padding-top: 82px;
     padding-bottom: 82px;
+
+    position: relative;
+    overflow: visible;
+  }
+
+  .benefits::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    z-index: -1;
+    filter: blur(1px);
+
+    top: -40px;
+    transform: translateX(30%);
+    width: 522px;
+    height: 382px;
+
+    background-image: image-set(
+      url("../images/bg/decor-bg3.png") 1x,
+      url("../images/bg/decor-bg3@2x.png") 2x
+    );
   }
 
   .benefits__title {
