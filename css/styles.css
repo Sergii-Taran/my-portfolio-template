@@ -1117,6 +1117,53 @@ body,
 /* -------------------------------- */
 /* ------- benefits section ------- */
 
+.benefits {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.benefits__container {
+}
+
+.benefits__title {
+  max-width: 310px;
+  margin-bottom: 40px;
+}
+
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.benefits__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefits__icon-wrapper {
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-bg-accent);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits__list-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefits__list-text {
+}
+
 /* .benefits {
   padding-top: 40px;
   padding-bottom: 40px;
