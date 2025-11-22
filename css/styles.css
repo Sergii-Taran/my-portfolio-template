@@ -1149,6 +1149,10 @@ body,
   flex-shrink: 0;
 }
 
+.benefits__icon-wrapper img {
+  display: block;
+}
+
 .benefits__list-title {
   font-weight: 400;
   font-size: 18px;
