@@ -970,9 +970,7 @@ body,
 .skills__marquee-bottom {
   position: relative;
   overflow: hidden;
-  /* width: 120vw; */
   width: 100%;
-  /* margin-left: -10vw; */
   display: flex;
   white-space: nowrap;
 
@@ -1122,9 +1120,6 @@ body,
   padding-bottom: 40px;
 }
 
-.benefits__container {
-}
-
 .benefits__title {
   max-width: 310px;
   margin-bottom: 40px;
@@ -1151,6 +1146,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .benefits__list-title {
@@ -1159,65 +1155,6 @@ body,
   line-height: 1.56;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.benefits__list-text {
-}
-
-/* .benefits {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.benefits__container {
-}
-
-.benefits__title {
-  max-width: 300px;
-  margin-bottom: 40px;
-}
-
-.benefits__list {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  width: 100%;
-}
-
-.benefits__list-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 16px;
-}
-
-.benefits__icon-wrapper {
-  border-radius: 8px;
-  width: 48px;
-  height: 48px;
-  background-color: var(--color-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.benefits__list-icon {
-  fill: var(--color-accent);
-}
-
-.benefits__list-title {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.benefits__list-text {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 768px) {
@@ -1227,8 +1164,8 @@ body,
   }
 
   .benefits__title {
-    max-width: 704px;
-    margin-bottom: 0px;
+    max-width: 690px;
+    margin-bottom: 0;
   }
 
   .benefits__list {
@@ -1256,6 +1193,11 @@ body,
   .benefits__list-item:nth-child(4) {
     grid-column: 1;
     grid-row: 3;
+  }
+
+  .benefits__list-title {
+    font-size: 20px;
+    line-height: 1.5;
   }
 }
 
@@ -1294,7 +1236,7 @@ body,
     grid-column: 3;
     grid-row: 2;
   }
-} */
+}
 
 /* --------------------------------- */
 /* ------- questions section ------- */
