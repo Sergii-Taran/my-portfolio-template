@@ -867,6 +867,32 @@ body,
   .about {
     padding-top: 124px;
     padding-bottom: 62px;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    z-index: -1;
+    filter: blur(2px);
+
+    bottom: 235px;
+    transform: translateX(5%);
+    width: 332px;
+    height: 248px;
+
+    background-image: image-set(
+      url("../images/bg/decor-bg4.png") 1x,
+      url("../images/bg/decor-bg4@2x.png") 2x
+    );
   }
 
   .about__subcontainer {
@@ -902,6 +928,13 @@ body,
   .about {
     padding-top: 164px;
     padding-bottom: 82px;
+  }
+
+  .about::before {
+    bottom: 374px;
+    transform: translateX(64%);
+    width: 380px;
+    height: 260px;
   }
 
   .about__subcontainer {
