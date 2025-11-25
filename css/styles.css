@@ -1475,6 +1475,9 @@ body,
 .questions {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  position: relative;
+  overflow: visible;
 }
 
 .questions__title {
@@ -1596,6 +1599,32 @@ body,
   .questions {
     padding-top: 82px;
     padding-bottom: 82px;
+
+    position: relative;
+    overflow: visible;
+  }
+
+  .questions::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    z-index: -1;
+    filter: blur(3px);
+
+    bottom: 106px;
+    transform: translateX(-116%);
+    width: 520px;
+    height: 406px;
+
+    background-image: image-set(
+      url("../images/bg/decor-bg6.png") 1x,
+      url("../images/bg/decor-bg6@2x.png") 2x
+    );
   }
 
   .questions__title {
