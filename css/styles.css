@@ -222,7 +222,9 @@ button {
   background-color: var(--color-elements-bg);
   border-radius: 16px;
   border: 1px solid transparent;
-  transition: background-color 0.4s ease, border-color 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
   overflow: hidden;
 }
 
@@ -235,7 +237,9 @@ button {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  transition: transform 0.4s ease, background-color 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    background-color 0.4s ease;
 }
 
 .slider::before {
@@ -266,7 +270,9 @@ body,
 .header__logo,
 .header__burger-icon,
 .header__link {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -340,7 +346,9 @@ body,
   pointer-events: none;
   transform: translateY(-20px);
 
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 
   display: flex;
   flex-direction: column;
@@ -1498,7 +1506,9 @@ body,
   gap: 24px;
 
   overflow: hidden;
-  transition: background-color 0.3s ease, border-radius 0.3s ease,
+  transition:
+    background-color 0.3s ease,
+    border-radius 0.3s ease,
     border-bottom-color 0.3s ease;
 }
 
@@ -1562,7 +1572,10 @@ body,
   overflow: hidden;
   opacity: 0;
 
-  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease,
+    padding 0.3s ease;
 
   padding-top: 0;
 }
@@ -1653,7 +1666,7 @@ body,
 .reviews__container {
 }
 
-.reviews_title {
+.reviews__title {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -1686,7 +1699,7 @@ body,
   margin-bottom: 24px;
 }
 
-.reviews_author {
+.reviews__author {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1729,6 +1742,11 @@ body,
   background: #f1f1f1;
 }
 
+.reviews__btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 .reviews__btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
@@ -1753,7 +1771,7 @@ body,
     padding-bottom: 62px;
   }
 
-  .reviews_title {
+  .reviews__title {
     margin-bottom: 60px;
   }
 
@@ -1763,6 +1781,18 @@ body,
 }
 
 @media screen and (min-width: 1280px) {
+  .reviews {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .reviews__title {
+    margin-bottom: 80px;
+  }
+
+  .reviews__item {
+    height: auto;
+  }
 }
 
 /* ------------------------------------ */
