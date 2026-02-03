@@ -1673,10 +1673,15 @@ body,
 
 .reviews__wrapper {
   position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 .reviews__list {
-  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
 }
 
 .swiper-wrapper {
@@ -1693,6 +1698,7 @@ body,
 }
 
 .swiper-slide {
+  height: auto;
 }
 
 .reviews__text {

@@ -38,7 +38,7 @@ function renderReviews(reviews) {
       ({ text, name, avatar }) => `
         <li class="reviews__item swiper-slide">
           <p class="reviews__text section__text">${text}</p>
-          <div class="reviews_author">
+          <div class="reviews__author">
             <img
               src="${avatar}"
               alt="photo of ${name}"
@@ -82,15 +82,16 @@ function initSwiper() {
     },
 
     on: {
-      init: updateButtons,
-      slideChange: updateButtons,
+      init(swiperInstance) {
+        btnPrev.disabled = swiperInstance.isBeginning;
+        btnNext.disabled = swiperInstance.isEnd;
+      },
+      slideChange(swiperInstance) {
+        btnPrev.disabled = swiperInstance.isBeginning;
+        btnNext.disabled = swiperInstance.isEnd;
+      },
     },
   });
-}
-
-function updateButtons() {
-  btnPrev.disabled = swiper.isBeginning;
-  btnNext.disabled = swiper.isEnd;
 }
 
 loadReviews();
